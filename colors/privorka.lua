@@ -1,0 +1,1 @@
+require("privorka").load()

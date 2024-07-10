@@ -1,7 +1,7 @@
 local M = { }
 
 local colors = {
-  background = "#222426",
+  background = "#1d1f21",
   foreground = "#C1C3C2",
   selection  = "#3B3F44",
   line       = "#3B3F44",
@@ -17,7 +17,7 @@ local colors = {
   darkcolumn = "#1c1c1c",
   addbg      = "#5F875F",
   search     = "#2B2D30",
-  status     = "#262626",
+  status     = "#767676",
   addfg      = "#d7ffaf",
   changebg   = "#5F5F87",
   changefg   = "#d7d7ff",
@@ -41,7 +41,7 @@ local groups = {
   WinSeparator = { fg = colors.window },
   Folded       = { fg = colors.comment, bg = colors.darkcolumn },
   FoldColumn   = { fg = colors.none, bg = colors.darkcolumn },
-  SignColumn   = { fg = colors.none, bg = colors.darkcolumn },
+  SignColumn   = { fg = colors.none, bg = colors.background },
   LineNr       = { fg = colors.selection },
   CursorLineNr = { fg = colors.yellow },
   MatchParen   = { fg = colors.background, bg = colors.changebg },
@@ -59,7 +59,7 @@ local groups = {
   SpellBad     = { fg = colors.red, bg = colors.darkred, underline = true },
   SpellRare    = { fg = colors.purple, bg = colors.darkpurple, underline = true },
 
-  StatusLine   = { fg = colors.green, bg = colors.status },
+  StatusLine   = { fg = colors.background, bg = colors.status },
   StatusLineNC = { fg = colors.window, bg = colors.comment, reverse = true },
 
   TabLine      = { fg = colors.foreground, bg = colors.darkcolumn, reverse = true },
@@ -85,13 +85,15 @@ local groups = {
   Error        = { fg = colors.red, bg = colors.darkred, underline = true },
   Todo         = { fg = colors.addfg },
   qfLineNr     = { fg = colors.yellow },
+
+  DiagnosticError = { fg = colors.red },
  }
 
 function M.load()
   vim.cmd.hi("clear")
   vim.cmd.syntax("reset")
 
-  vim.g.colors_name = "jansedivy"
+  vim.g.colors_name = "privorka"
   vim.g.background = "dark"
   vim.o.termguicolors = true
 
