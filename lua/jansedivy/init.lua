@@ -85,6 +85,8 @@ local groups = {
   Error        = { fg = colors.red, bg = colors.darkred, underline = true },
   Todo         = { fg = colors.addfg },
   qfLineNr     = { fg = colors.yellow },
+
+  DiagnosticError = { fg = colors.red },
  }
 
 function M.load()
